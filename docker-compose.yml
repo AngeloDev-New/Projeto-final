@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_mecanica
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mecanica
+      MYSQL_USER: user
+      MYSQL_PASSWORD: pass
+    ports:
+      - "4600:3306"
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  # app:
+  #   build: ./app
+  #   depends_on:
+  #     - mysql
+  #   environment:
+  #     DB_HOST: mysql
+  #     DB_NAME: mecanica
+  #     DB_USER: user    
+  #     DB_PASS: pass
