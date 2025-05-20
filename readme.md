@@ -7,6 +7,7 @@
 Projeto de integração entre **Inteligência Artificial** e **Banco de Dados**, desenvolvido no 2º semestre do curso de IA. Utiliza Docker para infraestrutura e Python para manipulação de dados e automações.
 
 ---
+![DER](DER_mecanica.png)
 
 ## 🧰 Requisitos
 
