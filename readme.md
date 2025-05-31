@@ -82,6 +82,18 @@ Projeto-final/
 
 - Certifique-se de que o Docker está em execução antes de usar `docker compose up`.
 - O script `app/script.py` realiza a alimentação inicial do banco. Ele pode ser adaptado conforme a necessidade dos dados.
+- Acessar bd: mysql -h 127.0.0.1 -P 4600 -u user -p mecanica
+- Verificar tamanho:
+SELECT 
+  table_schema AS "Banco de Dados",
+  ROUND(SUM(data_length + index_length) / 1024 / 1024, 2) AS "Tamanho (MB)"
+FROM 
+  information_schema.tables
+WHERE 
+  table_schema = "mecanica"
+GROUP BY 
+  table_schema;
+
 
 ---
 
